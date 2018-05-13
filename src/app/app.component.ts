@@ -26,6 +26,12 @@ export class AppComponent {
     title: 'Title',
     isFavorite: true
   };
+
+  tweet = {
+    isLiked: false,
+    likesCount: 10
+  };
+
   onFavoriteChanged(eventArgs: RatingChangedEventArgs) {
     console.log(eventArgs.newRating + ' star(s)');
   }

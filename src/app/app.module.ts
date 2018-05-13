@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { TestFavoriteComponent } from './test-favorite/test-favorite.component';
 import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { PanelComponent } from './panel/panel.component';
     FavoriteComponent,
     TestFavoriteComponent,
     PanelComponent,
+    LikeComponent,
   ],
   imports: [
     BrowserModule
