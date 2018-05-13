@@ -30,6 +30,6 @@ export class FavoriteComponent implements OnInit {
     this.change.emit({ newRating: this.numStars });
   }
 }
-export interface FavoriteChangedEventArgs {
+export interface RatingChangedEventArgs {
   newRating: number;
 }

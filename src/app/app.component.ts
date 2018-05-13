@@ -1,6 +1,6 @@
 import { Movie } from './movie';
 import { Component } from '@angular/core';
-import { FavoriteChangedEventArgs } from './test-favorite/test-favorite.component';
+import { RatingChangedEventArgs } from './favorite/favorite.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,7 +26,7 @@ export class AppComponent {
     title: 'Title',
     isFavorite: true
   };
-  onFavoriteChanged(eventArgs: FavoriteChangedEventArgs) {
-    console.log(eventArgs);
+  onFavoriteChanged(eventArgs: RatingChangedEventArgs) {
+    console.log(eventArgs.newRating + ' star(s)');
   }
 }
