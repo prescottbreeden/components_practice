@@ -1,5 +1,5 @@
-<h3>Space Balls <span class="small">(rating: <app-favorite></app-favorite>)</span></h3>
-<h3>Caddyshack <span class="small">(rating: <app-favorite></app-favorite>)</span></h3>
-<h3>Three Amigos <span class="small">(rating: <app-favorite></app-favorite>)</span></h3>
-<h3>Avengers <span class="small">(rating: <app-favorite></app-favorite>)</span></h3>
-<h3>Deadpool <span class="small">(rating: <app-favorite></app-favorite>)</span></h3>
+<div class="movies" *ngFor="let movie of movies">  
+  <h3>{{ movie.name }} <span class="small">(rating: <app-favorite (change)="onFavoriteChanged($event)"></app-favorite>)</span></h3>  
+</div>
+
+<app-test-favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-test-favorite>
