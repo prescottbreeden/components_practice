@@ -1,2 +1,4 @@
-<span *ngIf="!isFavorite" (click)="toggleFavorite()"><i class="far fa-star"></i></span>
-<span *ngIf="isFavorite" (click)="toggleFavorite()"><i class="fas fa-star"></i></span>
+<span>
+  <i class="far fa-star" *ngIf="!isFavorite" (click)="toggleFavorite()"></i>
+  <i class="fas fa-star" *ngIf="isFavorite" (click)="toggleFavorite()"></i>
+</span>
