@@ -1,3 +1,10 @@
 .gold {
     color: gold;
 }
+.stars {
+    display: inline-block;
+}
+
+.star {
+    display: inline-block;
+}

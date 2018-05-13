@@ -1,4 +1,64 @@
-<span class="gold">
-  <i class="far fa-star" *ngIf="!isFavorite" (click)="toggleFavorite()"></i>
-  <i class="fas fa-star" *ngIf="isFavorite" (click)="toggleFavorite()"></i>
-</span>
+<div class="stars">
+  <div class="five-star star">
+    <div class="four-star star">
+      <div class="three-star star">
+        <div class="two-star star">
+          <div class="one-star star">
+            <span class="gold">
+              <i class="far fa-star" value="1" *ngIf="!oneStar" (click)="toggleFavorite($event)"></i>
+              <i class="fas fa-star" value="1" *ngIf="oneStar" (click)="toggleFavorite($event)"></i>
+            </span>
+          </div>
+          <span class="gold">
+            <i class="far fa-star" value="2" *ngIf="!twoStar" (click)="toggleFavorite($event)"></i>
+            <i class="fas fa-star" value="2" *ngIf="twoStar" (click)="toggleFavorite($event)"></i>
+          </span>
+        </div>
+        <span class="gold">
+          <i class="far fa-star" value="3" *ngIf="!threeStar" (click)="toggleFavorite($event)"></i>
+          <i class="fas fa-star" value="3" *ngIf="threeStar" (click)="toggleFavorite($event)"></i>
+        </span>
+      </div>
+      <span class="gold">
+        <i class="far fa-star" value="4" *ngIf="!fourStar" (click)="toggleFavorite($event)"></i>
+        <i class="fas fa-star" value="4" *ngIf="fourStar" (click)="toggleFavorite($event)"></i>
+      </span>
+    </div>
+    <span class="gold">
+      <i class="far fa-star" value="5" *ngIf="!fiveStar" (click)="toggleFavorite($event)"></i>
+      <i class="fas fa-star" value="5" *ngIf="fiveStar" (click)="toggleFavorite($event)"></i>
+    </span>
+  </div>
+</div>
+  
+
+<!-- <div class="five-star">
+    <div class="four-star">
+      <div class="three-star">
+        <div class="two-star">
+          <div class="one-star">
+            <span class="gold">
+              <i class="far fa-star" value="1" *ngIf="!isFavorite" (click)="toggleFavorite()"></i>
+              <i class="fas fa-star" value="1" *ngIf="isFavorite" (click)="toggleFavorite()"></i>
+            </span>
+          </div>
+          <span class="gold">
+            <i class="far fa-star" value="2" *ngIf="!isFavorite" (click)="toggleFavorite()"></i>
+            <i class="fas fa-star" value="2" *ngIf="isFavorite" (click)="toggleFavorite()"></i>
+          </span>
+        </div>
+        <span class="gold">
+          <i class="far fa-star" value="3" *ngIf="!isFavorite" (click)="toggleFavorite()"></i>
+          <i class="fas fa-star" value="3" *ngIf="isFavorite" (click)="toggleFavorite()"></i>
+        </span>
+      </div>
+      <span class="gold">
+        <i class="far fa-star" value="4" *ngIf="!isFavorite" (click)="toggleFavorite()"></i>
+        <i class="fas fa-star" value="4" *ngIf="isFavorite" (click)="toggleFavorite()"></i>
+      </span>
+    </div>
+    <span class="gold">
+      <i class="far fa-star" value="5" *ngIf="!isFavorite" (click)="toggleFavorite()"></i>
+      <i class="fas fa-star" value="5" *ngIf="isFavorite" (click)="toggleFavorite()"></i>
+    </span>
+  </div> -->
