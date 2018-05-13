@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { TestFavoriteComponent } from './test-favorite/test-favorite.component';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FavoriteComponent,
-    TestFavoriteComponent
+    TestFavoriteComponent,
+    PanelComponent,
   ],
   imports: [
     BrowserModule

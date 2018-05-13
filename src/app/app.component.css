@@ -1,3 +1,5 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+
 .small {
     font-size: .8em;
     font-weight: 400;

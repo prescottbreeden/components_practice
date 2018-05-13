@@ -1,5 +1,20 @@
 <div class="movies" *ngFor="let movie of movies">  
-  <h3>{{ movie.name }} <span class="small">(rating: <app-favorite (change)="onFavoriteChanged($event)"></app-favorite>)</span></h3>  
+  <app-panel>
+    <div class="heading">
+      <h3>{{ movie.name }} <span class="small">(rating: <app-favorite (change)="onFavoriteChanged($event)"></app-favorite>)</span></h3>  
+    </div>
+    <div class="body">
+      {{ movie.description }}
+    </div>
+</app-panel>
 </div>
 
-<app-test-favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-test-favorite>
+<!-- <app-test-favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-test-favorite> -->
+
+<!-- <app-panel>
+  <div class="heading">Heading</div>
+  <div class="body">
+    <h2>Body</h2>  
+    <p>Some content...</p>
+  </div>
+</app-panel> -->
