@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-favorite',
@@ -6,6 +6,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./favorite.component.css']
 })
 export class FavoriteComponent implements OnInit {
+  @Input() initStars: number;
+
   @Output() change = new EventEmitter();
   numStars: number;
   oneStar: boolean;
@@ -17,6 +19,8 @@ export class FavoriteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.changeStars(this.initStars);
+
   }
 
   toggleFavorite($event) {
@@ -28,6 +32,14 @@ export class FavoriteComponent implements OnInit {
     this.fourStar = (4 <= this.numStars);
     this.fiveStar = (5 <= this.numStars);
     this.change.emit({ newRating: this.numStars });
+  }
+
+  changeStars(rating) {
+    this.oneStar = (1 <= rating);
+    this.twoStar = (2 <= rating);
+    this.threeStar = (3 <= rating);
+    this.fourStar = (4 <= rating);
+    this.fiveStar = (5 <= rating);
   }
 }
 export interface RatingChangedEventArgs {

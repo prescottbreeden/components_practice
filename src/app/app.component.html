@@ -1,13 +1,14 @@
 <div class="movies" *ngFor="let movie of movies">  
   <app-panel>
     <ng-container class="heading">
-      <h3>{{ movie.name }} <span class="small">(rating: <app-favorite (change)="onFavoriteChanged($event)"></app-favorite>)</span></h3>  
+      <h3>{{ movie.name }} <span class="small">(rating: <app-favorite [initStars]="movie.rating" (change)="onFavoriteChanged($event)"></app-favorite>)</span></h3>  
     </ng-container>
     <ng-container class="body">
       {{ movie.description }}
       <app-like 
         [likesCount]="tweet.likesCount"
         [isActive]="tweet.isLiked"
+        [isLiked]="movie.like"
       ></app-like>
     </ng-container>
 </app-panel>

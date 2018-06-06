@@ -7,14 +7,16 @@ import { RatingChangedEventArgs } from './favorite/favorite.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  SpaceBalls = new Movie('Space Balls');
-  Caddyshack = new Movie('Caddyshack');
-  ThreeAmigos = new Movie('Three Amigos');
-  Avengers = new Movie('Avengers');
-  Deadpool = new Movie('Deadpool');
+  DavinciCode = new Movie('Davinci Code', 1, false);
+  SpaceBalls = new Movie('Space Balls', 5, true);
+  Caddyshack = new Movie('Caddyshack', 5, true);
+  ThreeAmigos = new Movie('Three Amigos', 4);
+  Avengers = new Movie('Avengers', 3);
+  Deadpool = new Movie('Deadpool', 5, true);
   obj: any;
 
   movies = [
+    this.DavinciCode,
     this.SpaceBalls,
     this.Caddyshack,
     this.ThreeAmigos,
